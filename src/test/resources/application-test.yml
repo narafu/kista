@@ -1,10 +1,9 @@
 spring:
   datasource:
-    # Testcontainers JDBC URL: 테스트 실행 시 자동으로 PostgreSQL 컨테이너를 기동합니다
-    url: jdbc:tc:postgresql:16:///testdb
-    username: test
-    password: test
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:postgresql://localhost:5432/kistadb
+    username: kista
+    password: kista
+    driver-class-name: org.postgresql.Driver
 
   flyway:
     enabled: true
