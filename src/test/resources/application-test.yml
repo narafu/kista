@@ -14,11 +14,6 @@ spring:
     hibernate:
       ddl-auto: validate
 
-  ai:
-    mcp:
-      server:
-        enabled: false
-
 logging:
   level:
     org.hibernate.SQL: DEBUG
