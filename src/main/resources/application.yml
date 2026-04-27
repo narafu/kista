@@ -64,6 +64,15 @@ kis:
   symbol: ${KIS_SYMBOL:SOXL}
   exchange-code: ${KIS_EXCHANGE_CODE:AMS}
 
+telegram:
+  bot-token: ${TELEGRAM_BOT_TOKEN:}
+  chat-id: ${TELEGRAM_CHAT_ID:}
+
+spring:
+  task:
+    scheduling:
+      thread-name-prefix: kista-scheduler-
+
 logging:
   level:
     root: INFO
