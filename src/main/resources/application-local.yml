@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/kistadb
-    username: kista
-    password: kista
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/kistadb}
+    username: ${DB_USERNAME:kista}
+    password: ${DB_PASSWORD:kista}
 
   jpa:
     show-sql: true
