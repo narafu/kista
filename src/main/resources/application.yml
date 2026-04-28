@@ -32,6 +32,10 @@ spring:
     baseline-on-migrate: false
     validate-on-migrate: true
 
+  task:
+    scheduling:
+      thread-name-prefix: kista-scheduler-
+
 management:
   endpoints:
     web:
@@ -67,11 +71,6 @@ kis:
 telegram:
   bot-token: ${TELEGRAM_BOT_TOKEN:}
   chat-id: ${TELEGRAM_CHAT_ID:}
-
-spring:
-  task:
-    scheduling:
-      thread-name-prefix: kista-scheduler-
 
 logging:
   level:
