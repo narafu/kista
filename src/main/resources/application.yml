@@ -1,6 +1,6 @@
 spring:
   application:
-    name: kista
+    name: kista-api
 
   threads:
     virtual:
@@ -14,7 +14,7 @@ spring:
       maximum-pool-size: 10
       minimum-idle: 2
       connection-timeout: 20000
-      pool-name: HikariPool-Kista
+      pool-name: HikariPool-KistaApi
 
   jpa:
     hibernate:
@@ -34,7 +34,7 @@ spring:
 
   task:
     scheduling:
-      thread-name-prefix: kista-scheduler-
+      thread-name-prefix: kista-api-scheduler-
 
 management:
   endpoints:

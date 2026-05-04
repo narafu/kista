@@ -22,7 +22,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
     networks:
-      - kista-net
+      - kista-api-net
 
   # ── PostgreSQL ────────────────────────────────────────────────────────────────
   postgres:
@@ -41,7 +41,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - kista-net
+      - kista-api-net
 
   # ── Prometheus ────────────────────────────────────────────────────────────────
   prometheus:
@@ -55,7 +55,7 @@ services:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.retention.time=7d"
     networks:
-      - kista-net
+      - kista-api-net
 
   # ── Grafana ───────────────────────────────────────────────────────────────────
   grafana:
@@ -72,7 +72,7 @@ services:
     depends_on:
       - prometheus
     networks:
-      - kista-net
+      - kista-api-net
 
 volumes:
   postgres_data:
@@ -80,5 +80,5 @@ volumes:
   grafana_data:
 
 networks:
-  kista-net:
+  kista-api-net:
     driver: bridge
