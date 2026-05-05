@@ -17,6 +17,7 @@ spring:
       pool-name: HikariPool-KistaApi
 
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: validate
     show-sql: false
